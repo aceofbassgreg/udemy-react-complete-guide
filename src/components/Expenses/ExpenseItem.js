@@ -4,6 +4,7 @@ import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
+  // we use const because we never assign a new title; we re-evaluate the component function when state changes
   const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {
