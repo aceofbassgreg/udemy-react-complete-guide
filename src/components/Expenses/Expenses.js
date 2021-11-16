@@ -9,8 +9,8 @@ function Expenses(props) {
   }
   return (
     <div>
-      <ExpenseFilter onChangeDateFilter={ filterByDate }/>
       <Card className="expenses">
+      <ExpenseFilter onChangeDateFilter={ filterByDate }/>
       {
         props.expenses.map(expenseItem => {
           return(
