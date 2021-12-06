@@ -11,6 +11,7 @@ function Expenses(props) {
     setFilteredYear(year)
     console.log(year)
   }
+
   return (
     <div>
       <Card className="expenses">
