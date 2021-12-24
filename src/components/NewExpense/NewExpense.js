@@ -21,7 +21,10 @@ const NewExpense = (props) => {
 
   const renderedComponent = () => {
     if (formState) {
-      return <ExpenseForm onSaveExpenseData={ saveExpenseDataHandler } />
+      return <ExpenseForm
+        onCancel={ formStateHandler }
+        onSaveExpenseData={ saveExpenseDataHandler }
+      />
     } else {
       return <button onClick={ formStateHandler }>Add New Expense</button>
     }
