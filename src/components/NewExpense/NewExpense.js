@@ -9,24 +9,24 @@ const NewExpense = (props) => {
       ...enteredExpenseData,
       id: Math.random().toString()
     };
-    setFormState(!formState)
+    setFormVisibility(!formVisibility)
     props.onAddExpense(expenseData);
   }
 
-  const [formState, setFormState] = useState(false);
+  const [formVisibility, setFormVisibility] = useState(false);
 
-  const formStateHandler = () => {
-    setFormState(!formState)
+  const formVisibilityHandler = () => {
+    setFormVisibility(!formVisibility)
   }
 
   const renderedComponent = () => {
-    if (formState) {
+    if (formVisibility) {
       return <ExpenseForm
-        onCancel={ formStateHandler }
+        onCancel={ formVisibilityHandler }
         onSaveExpenseData={ saveExpenseDataHandler }
       />
     } else {
-      return <button onClick={ formStateHandler }>Add New Expense</button>
+      return <button onClick={ formVisibilityHandler }>Add New Expense</button>
     }
   }
 
